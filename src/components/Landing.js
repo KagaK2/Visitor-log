@@ -1,5 +1,6 @@
 import React from "react";
 import { FirebaseContext } from "./Firebase";
+import Clock from "./Clock";
 import "../css/Landing.css";
 const flavorText = {
   introText: ["", "hey, mind letting us know who you are?"],
@@ -56,7 +57,7 @@ class Landing extends React.Component {
                 this.regularRef.current.classList.remove("disappear");
               }
             ),
-          5000
+          2000
         );
       }
     );
@@ -89,7 +90,7 @@ class Landing extends React.Component {
                 this.firstTimeRef.current.classList.remove("disappear");
               }
             ),
-          5000
+          2000
         );
       }
     );
@@ -112,6 +113,7 @@ class Landing extends React.Component {
           </div>
         </div>
         <div className="landing-footer">{this.state.footerText}</div>
+        <Clock />
       </div>
     );
   }
